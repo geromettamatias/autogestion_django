@@ -1,0 +1,40 @@
+ {% extends  "index.html" %}
+
+
+  {% block content %}
+            
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                     {% csrf_token %}
+                    <fieldset>
+                        <legend class="text-center header">Nuevo Alumno</legend>
+
+    {{ form.as_p }}
+    {% csrf_token %}
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
